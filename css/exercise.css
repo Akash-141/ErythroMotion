@@ -1,0 +1,446 @@
+.exercise-page-main {
+    padding: var(--spacing-md);
+    background-color: var(--white);
+}
+
+.global-message {
+    max-width: 1400px;
+    margin: 0 auto var(--spacing-md) auto;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.global-message.success-message {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.global-message.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+.exercise-page-layout {
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+    gap: var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.styled-sidebar-box {
+    background-color: var(--background-color-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color-primary);
+}
+
+.filter-section.styled-sidebar-box,
+.right-aside-section {
+    /* Apply sticky to the parent of workout plan & cta */
+    align-self: flex-start;
+    position: sticky;
+    top: calc(var(--navbar-height) + var(--spacing-md));
+}
+
+.right-aside-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    /* Gap between workout plan box and cta box */
+    background-color: transparent;
+    /* Parent aside should be transparent */
+    padding: 0;
+    /* Remove padding if children have it */
+    box-shadow: none;
+    /* Remove shadow if children have it */
+}
+
+.user-plan-content-box,
+.cta-motionmart-sidebar-box {
+    /* These children now get the common box styling but are not sticky themselves */
+    width: 100%;
+    /* Take full width of parent aside column */
+}
+
+.filter-section h2,
+.user-plan-content-box h2,
+.cta-motionmart-sidebar-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+.cta-motionmart-sidebar-box h2 {
+    /* Specific override for CTA if needed */
+    font-size: 1.2rem;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-xs);
+    padding-bottom: 0;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+.filter-form .form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-form .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-color-primary);
+}
+
+.filter-form .form-group select,
+.filter-form .form-group input[type="checkbox"] {
+    width: 100%;
+    padding: var(--spacing-xs);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    background-color: var(--white);
+    color: var(--text-color-primary);
+}
+
+.filter-form .form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--spacing-xs);
+    vertical-align: middle;
+}
+
+.filter-form .checkbox-group label {
+    display: inline;
+    font-weight: normal;
+    color: var(--text-color-primary);
+}
+
+.filter-button {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.filter-button:hover {
+    background-color: var(--primary-color-darker);
+}
+
+.exercise-list-section {
+    padding: 0 var(--spacing-sm);
+}
+
+.exercise-list-section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.exercise-card {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.exercise-card:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateY(-5px);
+}
+
+.exercise-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.exercise-card-content {
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.exercise-card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.exercise-meta {
+    font-size: var(--font-size-small);
+    color: var(--text-color-secondary);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.exercise-meta span {
+    background-color: var(--background-color-light);
+    color: var(--text-color-primary);
+    padding: 3px 8px;
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+}
+
+.equipment-needed,
+.equipment-free {
+    font-size: var(--font-size-small);
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-style: italic;
+}
+
+.equipment-needed strong {
+    font-weight: 600;
+}
+
+.exercise-description-snippet {
+    font-size: var(--font-size-small);
+    color: var(--text-color-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+.exercise-actions {
+    margin-top: auto;
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.exercise-actions>* {
+    flex: 1;
+}
+
+.details-button,
+.add-to-plan-button {
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    transition: background-color var(--transition-speed), opacity var(--transition-speed);
+    border: none;
+    cursor: pointer;
+}
+
+.details-button {
+    background-color: var(--secondary-color);
+    color: var(--white-text-color);
+    display: block;
+}
+
+.details-button:hover {
+    background-color: #2980b9;
+}
+
+.add-to-plan-button {
+    background-color: var(--success-color);
+    color: var(--white-text-color);
+}
+
+.add-to-plan-button:hover {
+    opacity: 0.85;
+}
+
+.no-exercises {
+    text-align: center;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-medium);
+    color: var(--text-color-secondary);
+}
+
+.user-plan-content-box {
+    /* Replaces .user-plan-section for specific styling */
+    text-align: left;
+}
+
+.user-plan-content-box p a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.user-plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-md) 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.user-plan-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: var(--font-size-small);
+}
+
+.user-plan-item:last-child {
+    border-bottom: none;
+}
+
+.remove-item-form {
+    display: inline;
+    margin-left: var(--spacing-sm);
+}
+
+.remove-item-button {
+    background: none;
+    border: none;
+    color: var(--error-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 var(--spacing-xs);
+    line-height: 1;
+}
+
+.remove-item-button:hover {
+    color: var(--primary-color-darker);
+}
+
+.clear-plan-form {
+    margin-top: var(--spacing-sm);
+}
+
+.clear-plan-button {
+    width: 100%;
+    padding: var(--spacing-xs);
+    background-color: var(--error-color);
+    color: var(--white-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), opacity var(--transition-speed);
+}
+
+.clear-plan-button:hover {
+    opacity: 0.8;
+}
+
+.cta-motionmart-sidebar-box {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.cta-motionmart-sidebar-box p {
+    color: var(--text-color-primary);
+    opacity: 0.9;
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-small);
+}
+
+@keyframes pulseScale {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: var(--box-shadow);
+    }
+    /* 20% {
+        transform: scale(1.025);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    } */
+    50% {
+        transform: scale(1.075);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    /* 60% {
+        transform: scale(1.075);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    80% {
+        transform: scale(1.1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    } */
+}
+
+.cta-motionmart-sidebar-box .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), transform 0.15s ease-in-out;
+    box-shadow: var(--box-shadow);
+    animation: pulseScale 1.5s infinite ease;
+    width: 100%;
+}
+
+.cta-motionmart-sidebar-box .cta-button:hover {
+    background-color: var(--primary-color-darker);
+    transform: scale(1.03);
+    animation-play-state: paused;
+}
+
+@media (max-width: 1024px) {
+    .exercise-page-layout {
+        grid-template-columns: 3fr 9fr;
+        /* Filters and Main content only */
+    }
+    .right-aside-section {
+        /* Hide entire right aside */
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .exercise-page-layout {
+        grid-template-columns: 1fr;
+        /* Stack all sections */
+    }
+    .filter-section,
+    .exercise-list-section,
+    .right-aside-section {
+        /* All sections stack */
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+        position: static;
+        /* Remove sticky positioning on small screens */
+        top: auto;
+    }
+    .right-aside-section {
+        /* Ensure it's visible when stacked */
+        display: flex;
+    }
+    .exercise-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

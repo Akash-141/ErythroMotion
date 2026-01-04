@@ -1,0 +1,158 @@
+/* css/diet_nutrition.css */
+
+.nutrition-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.nutrition-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.nutrition-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.nutrition-header p {
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recommendation-box {
+    background-color: rgba(var(--primary-color-rgb, 255, 69, 36), 0.1);
+    border-left: 5px solid var(--primary-color);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.recommendation-box h3 {
+    margin-top: 0;
+    color: var(--primary-color-darker);
+    font-size: 1.2rem;
+}
+
+.recommendation-box p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.recommendation-box a {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.tabs-container {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: var(--spacing-md);
+}
+
+.tab-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color-secondary);
+    position: relative;
+    bottom: -2px;
+    /* Align with bottom border */
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.tab-button:hover {
+    color: var(--primary-color);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+    padding: var(--spacing-sm) 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color-primary);
+}
+
+.tab-content p,
+.tab-content ul {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.tab-content ul {
+    list-style-type: '✓ ';
+    /* Custom bullet point */
+    padding-left: var(--spacing-md);
+}
+
+.tab-content ul li {
+    padding-left: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.disclaimer-box {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.disclaimer-box i {
+    color: #f7b731;
+    margin-right: var(--spacing-xs);
+}
+
+@media (max-width: 600px) {
+    .tabs-container {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    .tab-button {
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+    .tab-button.active {
+        border-bottom-color: var(--primary-color);
+    }
+}

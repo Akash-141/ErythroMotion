@@ -1,0 +1,239 @@
+/* css/weather_health.css */
+
+.weather-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.weather-page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.weather-dashboard {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+}
+
+#search-container {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+#location-input {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+#search-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#search-btn:hover {
+    background-color: var(--primary-color-darker);
+}
+
+#dashboard-content.loading .weather-grid,
+#dashboard-content.loading .outlook-box {
+    display: none;
+}
+
+#dashboard-content.loading .spinner {
+    display: block;
+}
+
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin: var(--spacing-lg) auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.weather-card {
+    background-color: var(--background-color-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.weather-card i,
+.weather-card img {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    width: 50px;
+    text-align: center;
+}
+
+.weather-card.main-temp i {
+    color: var(--error-color);
+}
+
+.weather-card.condition i {
+    color: #f0ad4e;
+}
+
+.weather-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    color: var(--text-color-secondary);
+    font-weight: 500;
+}
+
+.weather-card p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+}
+
+.weather-card small {
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+}
+
+.outlook-box {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border-left: 5px solid;
+}
+
+.outlook-box.good {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left-color: var(--success-color);
+}
+
+.outlook-box.caution {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-left-color: #ffc107;
+}
+
+.outlook-box.danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left-color: var(--error-color);
+}
+
+.outlook-box h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.outlook-box p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.outlook-box ul {
+    margin: 0;
+    padding-left: var(--spacing-md);
+}
+
+.outlook-box ul li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-section {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid #ddd;
+}
+
+.info-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color-primary);
+}
+
+.info-card h3 i {
+    color: var(--primary-color);
+}
+
+.info-card p {
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+}
+
+@media (max-width: 600px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,225 @@
+/* css/admin_manage_exercises.css */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    padding-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-bottom: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.admin-page-title {
+    font-size: var(--font-size-large);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.admin-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed), opacity var(--transition-speed);
+    /* [cite: variables.css] */
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.add-new-button {
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+}
+
+.add-new-button:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.admin-table.exercises-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table.exercises-table th,
+.admin-table.exercises-table td {
+    border: 1px solid var(--border-color);
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table.exercises-table thead th {
+    background-color: var(--background-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    font-weight: 600;
+}
+
+.admin-table.exercises-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.admin-table.exercises-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+.actions-cell {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.actions-cell .admin-button {
+    margin: 0 var(--spacing-xs);
+    /* [cite: variables.css] */
+    padding: 5px 10px;
+}
+
+.actions-cell .edit-button {
+    background-color: var(--background-color-light);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+.actions-cell .edit-button:hover {
+    opacity: 0.8;
+}
+
+.actions-cell .delete-button {
+    background-color: var(--error-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.actions-cell .delete-button:hover {
+    opacity: 0.8;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.message {
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+    font-weight: 600;
+}
+
+.success-message {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    /* [cite: variables.css] */
+}
+
+.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* [cite: variables.css] */
+}
+
+.error-message p {
+    margin: var(--spacing-xs) 0;
+    /* [cite: variables.css] */
+}
+
+
+/* Pagination Styles (Alignment Updated) */
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    /* MODIFIED: Changed from center to flex-start for left alignment */
+    padding: var(--spacing-md) 0;
+    /* [cite: variables.css] */
+    list-style: none;
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-item {
+    margin: 0 var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    cursor: default;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    pointer-events: none;
+    cursor: default;
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}

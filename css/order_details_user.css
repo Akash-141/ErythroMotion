@@ -1,0 +1,304 @@
+/* css/order_details_user.css */
+
+.order-details-user-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--background-color-light);
+    /* [cite: variables.css] */
+    padding: var(--spacing-lg);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+}
+
+.page-main-title {
+    text-align: center;
+    font-size: var(--font-size-large);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-lg);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    padding-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-bottom: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.order-summary-box,
+.shipping-details-box,
+.order-items-box {
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    margin-bottom: var(--spacing-lg);
+    /* [cite: variables.css] */
+}
+
+.order-summary-box h2,
+.shipping-details-box h2,
+.order-items-box h2 {
+    font-size: 1.3rem;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    padding-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+}
+
+.order-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.order-info-grid p,
+.shipping-details-box p {
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    line-height: 1.6;
+}
+
+.order-info-grid p strong,
+.shipping-details-box p strong {
+    font-weight: 600;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+
+/* Order Status Styles (reusing from profile.css or admin_manage_orders.css logic) */
+
+.order-status {
+    padding: 3px 8px;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    font-size: 0.9rem;
+    /* Slightly larger for prominence */
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #333;
+}
+
+
+/* Amber */
+
+.status-processing {
+    background-color: #17a2b8;
+}
+
+
+/* Info Blue */
+
+.status-shipped {
+    background-color: #28a745;
+}
+
+
+/* Success Green */
+
+.status-delivered {
+    background-color: #6f42c1;
+}
+
+
+/* Purple */
+
+.status-cancelled {
+    background-color: #dc3545;
+}
+
+
+/* Danger Red */
+
+
+/* Add more as needed, e.g., .status-completed */
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+}
+
+.order-items-table th,
+.order-items-table td {
+    border-bottom: 1px solid #eee;
+    /* Lighter borders for item list */
+    padding: var(--spacing-sm) var(--spacing-xs);
+    /* [cite: variables.css] */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.order-items-table thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    padding-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.product-info-cell {
+    display: flex;
+    align-items: center;
+}
+
+.item-thumbnail-small {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    margin-right: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border: 1px solid #f0f0f0;
+}
+
+.profile-actions {
+    margin-top: var(--spacing-lg);
+    /* [cite: variables.css] */
+    text-align: center;
+}
+
+.button-secondary {
+    /* Assuming this is a general button style you have or will create */
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 600;
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+
+/* Responsive table for order items (similar to profile page order history) */
+
+@media (max-width: 768px) {
+    .order-items-table thead {
+        display: none;
+    }
+    .order-items-table,
+    .order-items-table tbody,
+    .order-items-table tr,
+    .order-items-table td {
+        display: block;
+        width: 100%;
+    }
+    .order-items-table tr {
+        margin-bottom: var(--spacing-md);
+        /* [cite: variables.css] */
+        border: 1px solid #e0e0e0;
+        border-radius: var(--border-radius);
+        /* [cite: variables.css] */
+        padding: var(--spacing-sm);
+        /* [cite: variables.css] */
+    }
+    .order-items-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        padding-top: var(--spacing-xs);
+        /* [cite: variables.css] */
+        padding-bottom: var(--spacing-xs);
+        /* [cite: variables.css] */
+    }
+    .order-items-table td:not(:last-child) {
+        border-bottom: 1px dashed #eee;
+    }
+    .order-items-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: var(--spacing-xs);
+        /* [cite: variables.css] */
+        width: calc(50% - var(--spacing-sm));
+        /* [cite: variables.css] */
+        padding-right: var(--spacing-xs);
+        /* [cite: variables.css] */
+        font-weight: bold;
+        text-align: left;
+        white-space: nowrap;
+    }
+    .product-info-cell {
+        justify-content: flex-end;
+        /* Align items (image, name) to right in stacked view */
+    }
+    .item-thumbnail-small {
+        margin-right: 0;
+        /* Remove margin if name is also on the right */
+        margin-left: var(--spacing-sm);
+        /* Add some space if needed */
+    }
+}
+
+
+/* Error & Success Message Styling (if not globally available from another CSS) */
+
+.message.global-message {
+    /* Assuming these classes are used */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+    font-weight: 600;
+}
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    /* [cite: variables.css] */
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* [cite: variables.css] */
+}
+
+.global-message p {
+    margin: 0;
+}

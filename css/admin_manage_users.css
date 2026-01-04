@@ -1,0 +1,93 @@
+/* css/admin_manage_users.css */
+
+
+/* Status Text Styles */
+
+.status-active {
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    font-weight: bold;
+}
+
+.status-suspended {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-banned {
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    font-weight: bold;
+}
+
+.status-pending_verification {
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    font-weight: bold;
+}
+
+
+/* Pagination Styles (Alignment Updated) */
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    /* This ensures left alignment */
+    padding: var(--spacing-md) 0;
+    /* [cite: variables.css] */
+    list-style: none;
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-item {
+    margin: 0 var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    border: 1px solid #ddd;
+    /* Consistent light border for pagination items */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    cursor: default;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    pointer-events: none;
+    cursor: default;
+    background-color: #f0f0f0;
+    /* Lighter disabled background */
+    border-color: #ddd;
+    /* Lighter disabled border */
+}

@@ -1,0 +1,218 @@
+/* css/admin_manage_blog.css */
+
+.admin-layout-split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
+
+.form-container-split {
+    flex: 1 1 350px;
+    /* Base width of 350px, can grow */
+    min-width: 300px;
+}
+
+.table-container-split {
+    flex: 2 1 500px;
+    /* Takes more space, base width of 500px */
+    min-width: 400px;
+}
+
+.table-container-full {
+    width: 100%;
+}
+
+.form-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.admin-form .form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.admin-form input[type="text"],
+.admin-form textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.admin-form input[type="text"]:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 255, 69, 36), 0.25);
+}
+
+.admin-form textarea {
+    resize: vertical;
+}
+
+.admin-form small {
+    display: block;
+    margin-top: var(--spacing-xs);
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+}
+
+.admin-form .add-new-button {
+    width: 100%;
+}
+
+
+/* MODIFIED: Table Styles to match other admin pages */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-small);
+    background-color: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid #e0e0e0;
+    padding: var(--spacing-sm);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table thead th {
+    background-color: var(--background-color);
+    /* Dark header */
+    color: var(--white-text-color);
+    font-weight: 600;
+}
+
+.admin-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Row striping */
+}
+
+.admin-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+.actions-cell {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.delete-form {
+    display: inline;
+}
+
+.admin-button.edit-button,
+.admin-button.delete-button {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    border: none;
+    color: var(--white-text-color);
+}
+
+.admin-button.edit-button {
+    background-color: var(--secondary-color, #17a2b8);
+}
+
+.admin-button.delete-button {
+    background-color: var(--error-color);
+}
+
+
+/* Post Status-specific Styles */
+
+.admin-table tr.status-draft {
+    background-color: #fefde8 !important;
+    /* Yellow for drafts, !important to override striping */
+}
+
+.admin-table tr.status-pending_review {
+    background-color: #e8f4fd !important;
+    /* Blue for pending, !important to override striping */
+}
+
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    background-color: #6c757d;
+    /* Default/Archived */
+    color: var(--white-text-color);
+}
+
+.status-published .status-badge {
+    background-color: var(--success-color);
+}
+
+.status-draft .status-badge {
+    background-color: #f0ad4e;
+    /* Orange */
+}
+
+.status-pending_review .status-badge {
+    background-color: #0275d8;
+    /* Blue */
+}
+
+
+/* Pagination Styles */
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--spacing-lg) 0;
+    list-style: none;
+}
+
+.pagination .page-item {
+    margin: 0 var(--spacing-xs);
+}
+
+.pagination .page-link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-color-darker);
+    color: var(--white-text-color);
+    border-color: var(--primary-color-darker);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border-color: var(--primary-color);
+    cursor: default;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-color-secondary);
+    pointer-events: none;
+    cursor: default;
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}

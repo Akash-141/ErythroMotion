@@ -1,0 +1,149 @@
+/* css/admin_manage_donors.css */
+
+
+/* General admin table styles for consistency */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-small);
+    background-color: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid #e0e0e0;
+    padding: var(--spacing-sm);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table thead th {
+    background-color: var(--background-color);
+    /* Dark header */
+    color: var(--white-text-color);
+    font-weight: 600;
+}
+
+.admin-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Row striping */
+}
+
+.admin-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+
+/* Specific styles for the donors table */
+
+.donors-table .blood-group-cell {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--error-color);
+    /* Make blood group stand out */
+    text-align: center;
+}
+
+.donors-table .status-badge {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--white-text-color);
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.donors-table .status-verified {
+    background-color: var(--success-color);
+}
+
+.donors-table .status-unverified {
+    background-color: #f0ad4e;
+    /* Orange */
+}
+
+.donors-table .status-unavailable {
+    background-color: #6c757d;
+    /* Grey */
+}
+
+.donors-table .actions-cell {
+    min-width: 220px;
+    /* Give more space for the form */
+}
+
+.status-update-form {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.status-update-form select {
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 0.85rem;
+}
+
+.status-update-form .admin-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: none;
+    color: var(--white-text-color);
+}
+
+.status-update-form .edit-button {
+    /* To match other pages */
+    background-color: var(--secondary-color, #28a745);
+}
+
+
+/* Consistent Pagination Styles */
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--spacing-lg) 0;
+    list-style: none;
+}
+
+.pagination .page-item {
+    margin: 0 var(--spacing-xs);
+}
+
+.pagination .page-link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-color-darker);
+    color: var(--white-text-color);
+    border-color: var(--primary-color-darker);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border-color: var(--primary-color);
+    cursor: default;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-color-secondary);
+    pointer-events: none;
+    cursor: default;
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}

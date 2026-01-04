@@ -1,0 +1,56 @@
+.order-success-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--white);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.order-success-container {
+    background-color: var(--background-color-light);
+    padding: var(--spacing-xl);
+    /* More padding for emphasis */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color-primary);
+    max-width: 600px;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    line-height: 1;
+}
+
+.order-success-container h1 {
+    font-size: 2rem;
+    color: var(--success-color);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+.order-success-container p {
+    font-size: var(--font-size-medium);
+    color: var(--text-color-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.order-success-actions {
+    margin-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.order-success-actions .button-primary,
+.order-success-actions .button-secondary {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-medium);
+}

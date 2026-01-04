@@ -1,0 +1,294 @@
+/* Global message styles - can be moved to a common CSS file later */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.wishlist-button svg {
+    stroke-width: 2;
+    /* Ensure stroke is visible */
+}
+
+.wishlist-button.active svg {
+    fill: var(--primary-color);
+    /* [cite: variables.css] */
+    stroke: var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.wishlist-button:not(.active) svg {
+    fill: none;
+    stroke: var(--text-color-secondary);
+    /* [cite: variables.css] */
+}
+
+.wishlist-button:not(.active):hover svg {
+    stroke: var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.message.global-message {
+    max-width: 1400px;
+    /* Or adjust to content width of motionmart.php */
+    margin: 0 auto var(--spacing-md) auto;
+    /* Centered, with bottom margin */
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+    /* Consistent with other form messages */
+}
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    /* var(--success-color) with alpha */
+    color: var(--success-color);
+    border: 2px solid var(--success-color);
+    /* Consistent border */
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    /* var(--error-color) with alpha */
+    color: var(--error-color);
+    border: 2px solid var(--error-color);
+    /* Consistent border */
+}
+
+.global-message p {
+    margin: 0;
+    /* Remove default paragraph margin inside message box */
+}
+
+
+/* Existing motionmart.css styles */
+
+.motionmart-main-content {
+    padding-bottom: var(--spacing-lg);
+    background-color: var(--white);
+}
+
+.motionmart-header {
+    background-color: var(--background-color);
+    color: var(--white-text-color);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.motionmart-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.motionmart-header p {
+    font-size: var(--font-size-medium);
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.motionmart-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.no-items-message {
+    text-align: center;
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-medium);
+    color: var(--text-color-secondary);
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.equipment-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    position: relative;
+}
+
+.equipment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.equipment-image-link {
+    display: block;
+    position: relative;
+}
+
+.equipment-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
+
+.equipment-card-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.equipment-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.equipment-name a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.equipment-name a:hover {
+    color: var(--primary-color);
+}
+
+.equipment-brand {
+    font-size: var(--font-size-small);
+    color: var(--text-color-secondary);
+    margin-bottom: var(--spacing-xs);
+    font-style: italic;
+}
+
+.equipment-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.equipment-description-snippet {
+    font-size: var(--font-size-small);
+    color: var(--text-color-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+    min-height: 4.5em;
+}
+
+.equipment-actions {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.wishlist-button {
+    background: none;
+    border: none;
+    color: var(--text-color-secondary);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.wishlist-button svg {
+    stroke: var(--text-color-secondary);
+    fill: none;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.wishlist-button:hover svg,
+.wishlist-button.active svg {
+    stroke: var(--primary-color);
+    fill: var(--primary-color);
+}
+
+.wishlist-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.add-to-cart-form {
+    flex-grow: 1;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    padding: var(--spacing-sm);
+    background-color: var(--success-color);
+    color: var(--white-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color var(--transition-speed), opacity var(--transition-speed);
+}
+
+.add-to-cart-button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .equipment-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+    }
+    .motionmart-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+    .equipment-card-content {
+        padding: var(--spacing-sm);
+    }
+    .equipment-name {
+        font-size: 1.1rem;
+    }
+    .equipment-price {
+        font-size: 1.2rem;
+    }
+    .equipment-description-snippet {
+        min-height: 3em;
+    }
+    .add-to-cart-button {
+        font-size: 0.8rem;
+    }
+}

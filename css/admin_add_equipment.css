@@ -1,0 +1,267 @@
+/* css/admin_add_equipment.css */
+
+.admin-container.form-container {
+    background-color: var(--background-color-light);
+    /* [cite: variables.css] */
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+    width: 100%;
+    max-width: 800px;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin: var(--spacing-md) auto;
+    /* [cite: variables.css] */
+}
+
+.admin-form {
+    padding: var(--spacing-xs);
+    /* [cite: variables.css] */
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.admin-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.admin-form .form-group {
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    flex: 1 1 calc(50% - (var(--spacing-md) / 2));
+    /* [cite: variables.css] */
+    min-width: 200px;
+    position: relative;
+}
+
+.admin-form .form-group.full-width,
+.admin-form .form-group:only-child {
+    flex-basis: 100%;
+}
+
+.admin-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form input[type="email"],
+.admin-form input[type="url"],
+.admin-form input[type="tel"],
+.admin-form input[type="date"],
+.admin-form input[type="password"],
+
+/* ADDED */
+
+.admin-form textarea,
+.admin-form select {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    border: 1px solid var(--border-color);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    box-sizing: border-box;
+    /* Important for consistent sizing */
+    line-height: 1.4;
+    /* Consistent line height */
+    height: auto;
+    /* Ensure height adjusts to padding and content */
+}
+
+.admin-form input[type="text"]:focus,
+.admin-form input[type="number"]:focus,
+.admin-form input[type="email"]:focus,
+.admin-form input[type="url"]:focus,
+.admin-form input[type="tel"]:focus,
+.admin-form input[type="date"]:focus,
+.admin-form input[type="password"]:focus,
+
+/* ADDED */
+
+.admin-form textarea:focus,
+.admin-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+}
+
+.admin-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.admin-form .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.admin-form .checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0;
+    vertical-align: middle;
+}
+
+.admin-form .checkbox-group label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.admin-form .admin-button.add-new-button {
+    width: auto;
+    min-width: 150px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.admin-form .admin-button.add-new-button:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    padding-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-bottom: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.admin-header .admin-title {
+    font-size: var(--font-size-large);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    margin: 0;
+}
+
+.admin-header .admin-button.plain-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed), opacity var(--transition-speed);
+    /* [cite: variables.css] */
+    border: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+}
+
+.admin-header .admin-button.plain-button:hover {
+    border: 2px solid var(--primary-color-darker);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    opacity: 1;
+}
+
+.message {
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+    font-weight: 600;
+}
+
+.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    /* [cite: variables.css] */
+}
+
+.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* [cite: variables.css] */
+}
+
+.error-message p {
+    margin: var(--spacing-xs) 0;
+    /* [cite: variables.css] */
+}
+
+@media (max-width: 768px) {
+    .admin-form .form-group {
+        flex-basis: 100%;
+    }
+    .admin-form .form-row {
+        gap: 0;
+        margin-bottom: 0;
+    }
+    .admin-form .form-group:not(:last-child) {
+        margin-bottom: var(--spacing-md);
+        /* [cite: variables.css] */
+    }
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .admin-header .admin-button.plain-button {
+        margin-top: var(--spacing-sm);
+        /* [cite: variables.css] */
+    }
+}

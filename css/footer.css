@@ -1,0 +1,95 @@
+.site-footer {
+    background-color: var(--background-color);
+    color: var(--white-text-color);
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    font-family: var(--font-family-primary);
+    margin-top: auto;
+}
+
+.footer-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: var(--spacing-md);
+    color: var(--white-text-color);
+}
+
+.footer-heading {
+    font-size: var(--font-size-medium);
+    color: var(--text-color-light);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-xs);
+    display: inline-block;
+}
+
+.footer-column p {
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+    color: var(--text-color-light);
+    margin-bottom: var(--spacing-xs);
+    padding-right: var(--spacing-md);
+}
+
+.footer-column a {
+    color: var(--white-text-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+}
+
+.sitemap-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-links li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.sitemap-links li a {
+    font-size: var(--font-size-small);
+    color: var(--white-text-color);
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    margin-right: var(--spacing-sm);
+    font-size: var(--font-size-large);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--white);
+    font-size: var(--font-size-small);
+    color: var(--white-text-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    .footer-heading {
+        display: block;
+    }
+}

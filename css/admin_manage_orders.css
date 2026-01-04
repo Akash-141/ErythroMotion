@@ -1,0 +1,207 @@
+/* css/admin_manage_orders.css */
+
+.admin-table.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-table.orders-table th,
+.admin-table.orders-table td {
+    border: 1px solid var(--border-color);
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table.orders-table thead th {
+    background-color: var(--background-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    font-weight: 600;
+}
+
+.admin-table.orders-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table.orders-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.order-status {
+    padding: 3px 8px;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: #ffe0b2;
+    color: #e65100;
+}
+
+.status-processing {
+    background-color: #b3e5fc;
+    color: #01579b;
+}
+
+.status-shipped {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+.status-delivered {
+    background-color: #d1c4e9;
+    color: #311b92;
+}
+
+.status-completed {
+    background-color: var(--success-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.status-cancelled {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+}
+
+.actions-cell {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.admin-button.view-details-button {
+    background-color: var(--secondary-color);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    border: none;
+    display: inline-block;
+}
+
+.admin-button.view-details-button:hover {
+    opacity: 0.8;
+}
+
+
+/* Global message styles for feedback */
+
+.message.global-message {
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+    font-weight: 600;
+}
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    /* Using 1px consistent with other message borders */
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* Using 1px consistent with other message borders */
+}
+
+.global-message p {
+    margin: 0;
+}
+
+
+/* Pagination Styles (Added) */
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    /* Align pagination to the left */
+    padding: var(--spacing-md) 0;
+    /* [cite: variables.css] */
+    list-style: none;
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-item {
+    margin: 0 var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-link {
+    display: block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    border: 1px solid #ddd;
+    /* Consistent light border */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    cursor: default;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    pointer-events: none;
+    cursor: default;
+    background-color: #f0f0f0;
+    /* Lighter disabled background */
+    border-color: #ddd;
+    /* Lighter disabled border */
+}

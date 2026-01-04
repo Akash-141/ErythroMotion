@@ -1,0 +1,266 @@
+/* .wishlist-main-content {} */
+
+.wishlist-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: var(--white); Using main background from body */
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.wishlist-title {
+    text-align: center;
+    font-size: var(--font-size-large);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-lg);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    padding-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-bottom: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.wishlist-empty-message {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+}
+
+.wishlist-empty-message p {
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.wishlist-empty-message a {
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.wishlist-empty-message a:hover {
+    color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    /* [cite: variables.css] */
+}
+
+.wishlist-item-card {
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.wishlist-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-item-image-link {
+    display: block;
+}
+
+.wishlist-item-image {
+    width: 100%;
+    height: 220px;
+    /* Consistent image height */
+    object-fit: cover;
+    display: block;
+}
+
+.wishlist-item-details {
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+    flex-grow: 1;
+    /* Allows description to take up space */
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-item-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.wishlist-item-name a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wishlist-item-name a:hover {
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.wishlist-item-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.wishlist-item-stock {
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    font-weight: 500;
+}
+
+.stock-available {
+    color: var(--success-color);
+}
+
+
+/* [cite: variables.css] */
+
+.stock-out {
+    color: var(--error-color);
+}
+
+
+/* [cite: variables.css] */
+
+.wishlist-item-added {
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    margin-top: auto;
+    /* Pushes to bottom if details flex-grow */
+}
+
+.wishlist-item-actions {
+    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    /* [cite: variables.css] */
+    display: flex;
+    gap: var(--spacing-sm);
+    /* [cite: variables.css] */
+    align-items: center;
+    /* Align buttons if they have different heights */
+}
+
+.wishlist-item-actions .wishlist-add-to-cart-form,
+.wishlist-item-actions .remove-from-wishlist-form {
+    flex: 1;
+    /* Make forms take equal width */
+}
+
+.button-primary,
+.button-danger {
+    /* General button styles */
+    width: 100%;
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), opacity var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.button-primary:disabled {
+    background-color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.add-to-cart-wishlist-btn {
+    /* Specifically for wishlist context if needed */
+    background-color: var(--success-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.add-to-cart-wishlist-btn:hover:not(:disabled) {
+    background-color: #008000;
+    /* Darker green */
+}
+
+.remove-wishlist-btn {
+    background-color: var(--error-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.remove-wishlist-btn:hover {
+    background-color: #cc0000;
+    /* Darker red */
+}
+
+
+/* Message Styling */
+
+.message.global-message {
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+    font-weight: 600;
+}
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    /* [cite: variables.css] */
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* [cite: variables.css] */
+}
+
+.global-message p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+        /* Single column on very small screens */
+    }
+    .wishlist-item-actions {
+        flex-direction: column;
+        /* Stack action buttons */
+    }
+}

@@ -1,0 +1,277 @@
+/* css/bmi.css */
+
+.bmi-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.bmi-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.bmi-intro {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    color: var(--text-color-secondary);
+    margin-bottom: var(--spacing-lg);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bmi-top-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+}
+
+.calculator-wrapper {
+    background-color: var(--background-color-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    flex: 2 1 450px;
+    min-width: 320px;
+}
+
+.bmi-chart-box {
+    padding: var(--spacing-md);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    flex: 1 1 350px;
+    margin-top: 0;
+    min-width: 300px;
+}
+
+.unit-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    padding: 5px;
+}
+
+.unit-tab {
+    flex: 1;
+    padding: var(--spacing-sm);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color-secondary);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.unit-tab.active {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-form {
+    display: none;
+}
+
+.bmi-form.active {
+    display: block;
+}
+
+.bmi-form .form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.bmi-form .form-row {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.bmi-form label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.bmi-form input[type="number"] {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.bmi-form input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 255, 69, 36), 0.25);
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.calculate-btn:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+    transform: scale(1.02);
+}
+
+.bmi-result-box {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.bmi-result-box.success-box {
+    background-color: rgba(40, 167, 69, 0.1);
+    border: 1px solid var(--success-color);
+}
+
+.bmi-result-box.error-box {
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid var(--error-color);
+}
+
+.bmi-result-box h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+.bmi-result-box .bmi-score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+}
+
+.bmi-result-box .bmi-category-text {
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+    margin: 0;
+}
+
+.error-box p {
+    color: var(--error-color);
+    font-weight: 500;
+}
+
+
+/* New Styles for Next Steps Prompt */
+
+.bmi-next-steps {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: rgba(var(--primary-color-rgb, 255, 69, 36), 0.1);
+    border: 1px solid rgba(var(--primary-color-rgb, 255, 69, 36), 0.3);
+}
+
+.bmi-next-steps h4 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.bmi-next-steps p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color-secondary);
+}
+
+.bmi-next-steps .next-steps-btn {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.bmi-chart-box h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+}
+
+.bmi-chart-box p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color-secondary);
+    max-width: 500px;
+    margin: 0 auto var(--spacing-md) auto;
+}
+
+.bmi-chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-sm);
+}
+
+.bmi-chart-table th,
+.bmi-chart-table td {
+    border: 1px solid #eee;
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+.bmi-chart-table thead th {
+    background-color: var(--background-color-light);
+    color: var(--text-color-primary);
+    font-weight: 600;
+}
+
+.bmi-chart-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.bmi-info-section {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid #ddd;
+}
+
+.bmi-info-section h3 {
+    font-size: 1.4rem;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.bmi-info-section p,
+.bmi-info-section ul {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.bmi-info-section ul {
+    list-style-position: inside;
+    padding-left: var(--spacing-sm);
+}
+
+@media (max-width: 820px) {
+    .bmi-top-layout {
+        flex-direction: column;
+    }
+}

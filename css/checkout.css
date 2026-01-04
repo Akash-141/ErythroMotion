@@ -1,0 +1,261 @@
+.checkout-main-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--white);
+    flex-grow: 1;
+}
+
+.checkout-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+}
+
+.checkout-title {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 700;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.checkout-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+}
+
+.shipping-details-section {
+    flex: 2;
+    min-width: 300px;
+    background-color: var(--background-color-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.shipping-details-section h2,
+.order-summary-section h2 {
+    font-size: 1.3rem;
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.checkout-form .form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.checkout-form .form-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.checkout-form .form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"] {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-medium);
+    background-color: var(--white);
+    color: var(--text-color-primary);
+}
+
+.checkout-form input[type="text"]:focus,
+.checkout-form input[type="tel"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+}
+
+.payment-method-group {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    /* Optional separator */
+}
+
+.payment-method-group h3 {
+    font-size: 1.1rem;
+    /* Slightly smaller than section h2 */
+    color: var(--text-color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: var(--spacing-xs);
+    width: auto;
+    /* Default radio size */
+    accent-color: var(--primary-color);
+    /* Modern way to color radio button */
+}
+
+.radio-option label {
+    margin-bottom: 0;
+    /* Align with radio button */
+    font-weight: normal;
+    /* Normal weight for radio label */
+    color: var(--text-color-primary);
+}
+
+.place-order-button {
+    width: 100%;
+    color: var(--white-text-color);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-medium);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    /* Matching border with background */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-weight: 700;
+    /* Added for consistency */
+    cursor: pointer;
+    /* Added */
+    transition: background-color var(--transition-speed);
+    /* Added */
+}
+
+.place-order-button:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+    /* Matching border on hover */
+}
+
+.order-summary-section {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--background-color-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    align-self: flex-start;
+}
+
+.order-summary-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.summary-item-details {
+    flex-grow: 1;
+    font-size: var(--font-size-small);
+}
+
+.summary-item-name {
+    display: block;
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.summary-item-price {
+    display: block;
+    color: var(--text-color-secondary);
+    text-align: right;
+}
+
+.summary-totals p {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-color-primary);
+}
+
+.summary-totals p span {
+    font-weight: 700;
+}
+
+.summary-totals .summary-grand-total span {
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.message.global-message {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+}
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    border: 2px solid var(--success-color);
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    border: 2px solid var(--error-color);
+}
+
+.global-message p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .checkout-layout {
+        flex-direction: column-reverse;
+    }
+    .shipping-details-section,
+    .order-summary-section {
+        flex-basis: auto;
+    }
+    .checkout-form .form-row {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+    .checkout-form .form-row .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+}

@@ -1,0 +1,681 @@
+/* css/profile.css */
+
+.profile-main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--spacing-lg) var(--spacing-md);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    flex-grow: 1;
+}
+
+.profile-container {
+    background-color: var(--background-color-light);
+    /* [cite: variables.css] */
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+    width: 100%;
+    max-width: 800px;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.profile-title {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    font-weight: 700;
+}
+
+.profile-section {
+    margin-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    padding-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    border-bottom: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+    display: inline-block;
+}
+
+.profile-form {
+    padding: 1rem 0 0 0;
+}
+
+.profile-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.profile-form .form-group {
+    flex: 1 1 calc(50% - (var(--spacing-md) / 2));
+    /* [cite: variables.css] */
+    min-width: 250px;
+    position: relative;
+    margin-bottom: var(--spacing-md);
+}
+
+.profile-form .form-group-full-width {
+    flex-basis: 100%;
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.profile-form.password-form .form-group {
+    flex-basis: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    font-weight: 500;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    line-height: 1.4;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.form-group input.readonly-field,
+.form-group input.readonly-field-display {
+    background-color: #e9ecef;
+    color: #495057;
+    cursor: default;
+    font-weight: 500;
+}
+
+.form-group input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-sm) center;
+    /* [cite: variables.css] */
+    background-size: 0.6em auto;
+    padding-right: calc(var(--spacing-sm) * 2.5);
+    /* [cite: variables.css] */
+}
+
+.form-group input[type="text"]:not(.readonly-field):not(.readonly-field-display):focus,
+.form-group input[type="email"]:not(.readonly-field):not(.readonly-field-display):focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 255, 69, 36), 0.25);
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-group input[type="password"],
+.password-group input[type="text"].password-field-active {
+    padding-right: calc(var(--spacing-sm) + 28px);
+    /* [cite: variables.css] */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: var(--spacing-xs);
+    /* [cite: variables.css] */
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--spacing-xs);
+    /* [cite: variables.css] */
+    height: 100%;
+}
+
+.toggle-password svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--text-color-secondary);
+    /* [cite: variables.css] */
+}
+
+.toggle-password:hover svg {
+    stroke: var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.submit-button {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-sm);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    /* [cite: variables.css] */
+    margin-top: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.submit-button:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.message {
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+}
+
+.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    font-weight: 600;
+}
+
+.error-message p {
+    margin: var(--spacing-xs) 0;
+    /* [cite: variables.css] */
+}
+
+.success-message {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    font-weight: 600;
+}
+
+.success-message p {
+    margin: var(--spacing-xs) 0;
+    /* [cite: variables.css] */
+}
+
+
+/* --- New Styles for User Blog Section --- */
+
+.create-post-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--white-text-color);
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+}
+
+.create-post-btn:hover {
+    background-color: var(--primary-color-darker);
+    border: 2px solid var(--primary-color-darker);
+}
+
+.posts-table .actions-cell {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+}
+
+.posts-table .actions-cell form {
+    margin: 0;
+}
+
+.button-danger {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-small);
+    color: var(--white-text-color);
+    background-color: var(--error-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.button-danger:hover {
+    background-color: #c82333;
+    /* Darker red */
+}
+
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: var(--white-text-color);
+    display: inline-block;
+}
+
+.status-published {
+    background-color: var(--success-color);
+}
+
+.status-draft {
+    background-color: #f0ad4e;
+}
+
+.status-pending_review {
+    background-color: #0275d8;
+}
+
+.status-archived {
+    background-color: #6c757d;
+}
+
+
+/* #order-history-section {} */
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-sm);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.profile-table th,
+.profile-table td {
+    border: 1px solid #e0e0e0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* [cite: profile_css_order_history] */
+    text-align: left;
+    vertical-align: middle;
+}
+
+.profile-table thead th {
+    background-color: #f8f9fa;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    font-weight: 600;
+}
+
+.profile-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+.profile-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Order Status Styles */
+
+.order-status {
+    padding: 3px 8px;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.status-processing {
+    background-color: #17a2b8;
+}
+
+.status-shipped {
+    background-color: #28a745;
+}
+
+.status-delivered {
+    background-color: #6f42c1;
+}
+
+.status-cancelled {
+    background-color: #dc3545;
+}
+
+.button-view-details {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    transition: background-color 0.2s;
+    font-weight: 500;
+    border: none;
+}
+
+.button-view-details:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+
+/* #workout-plan-section {} */
+
+.workout-plan-list {
+    margin-top: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.workout-plan-item {
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    /* [cite: variables.css] */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.workout-plan-item-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    border: 1px solid #f0f0f0;
+}
+
+.workout-plan-item-details {
+    flex-grow: 1;
+}
+
+.workout-plan-item-details h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    margin-top: 0;
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.workout-plan-item-details p {
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    line-height: 1.5;
+}
+
+.button-view-details-plan {
+    /* For "View Exercise" link in plan */
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 500;
+    margin-top: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.button-view-details-plan:hover {
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.workout-plan-item-actions {
+    margin-left: auto;
+    /* Pushes actions to the right */
+}
+
+.button-remove-plan-item {
+    background-color: transparent;
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* [cite: variables.css] */
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.button-remove-plan-item:hover {
+    background-color: var(--error-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.clear-all-plan-form {
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    text-align: right;
+    /* Aligns the button to the right */
+}
+
+.clear-plan-button-profile {
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* [cite: variables.css] */
+    background-color: var(--error-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.clear-plan-button-profile:hover {
+    background-color: #c82333;
+    /* Darker red for hover */
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .profile-form .form-group {
+        flex-basis: 100%;
+    }
+    .profile-form .form-row {
+        gap: 0;
+    }
+    .profile-table,
+    .profile-table tbody,
+    .profile-table tr,
+    .profile-table td {
+        display: block;
+        width: 100%;
+    }
+    .profile-table thead {
+        display: none;
+    }
+    .profile-table tr {
+        margin-bottom: var(--spacing-md);
+        /* [cite: variables.css] */
+        border: 1px solid #e0e0e0;
+        border-radius: var(--border-radius);
+        /* [cite: variables.css] */
+    }
+    .profile-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        border-bottom: 1px dashed #eee;
+    }
+    .profile-table td:last-child {
+        border-bottom: none;
+    }
+    .profile-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: var(--spacing-xs);
+        /* [cite: variables.css] */
+        width: calc(50% - var(--spacing-sm));
+        /* [cite: variables.css] */
+        padding-right: var(--spacing-xs);
+        /* [cite: variables.css] */
+        font-weight: bold;
+        text-align: left;
+        white-space: nowrap;
+    }
+    .workout-plan-item {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align items to start in column layout */
+    }
+    .workout-plan-item-image {
+        margin-bottom: var(--spacing-sm);
+        /* [cite: variables.css] */
+        align-self: center;
+        /* Center image in stacked view */
+    }
+    .workout-plan-item-actions {
+        margin-left: 0;
+        /* Reset margin for stacked layout */
+        margin-top: var(--spacing-sm);
+        /* [cite: variables.css] */
+        width: 100%;
+        /* Make actions take full width */
+        text-align: right;
+    }
+    .clear-all-plan-form {
+        text-align: center;
+        /* Center clear button on small screens */
+    }
+    .clear-plan-button-profile {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        padding: var(--spacing-sm);
+        /* [cite: variables.css] */
+    }
+    .profile-title {
+        margin-bottom: var(--spacing-sm);
+        /* [cite: variables.css] */
+    }
+    .section-title {
+        margin-bottom: var(--spacing-sm);
+        /* [cite: variables.css] */
+        font-size: 1.15rem;
+    }
+}

@@ -1,0 +1,433 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: var(--navbar-height);
+    font-family: var(--font-family-primary);
+    background-color: var(--white);
+}
+
+.site-navbar {
+    color: var(--white-text-color);
+    /* Using white-text-color for general text on navbar */
+    background-color: var(--background-color);
+    height: var(--navbar-height);
+    width: 100%;
+    padding: 0 var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Added flex-shrink to prevent logo from shrinking on smaller screens */
+    flex-shrink: 0;
+}
+
+.navbar-logo-img {
+    max-height: calc(var(--navbar-height) - 20px);
+    width: auto;
+    display: block;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    /* Allow links to take space and center if needed */
+    justify-content: center;
+    /* Center main navigation links */
+    margin: 0;
+    /* Reset margin */
+    padding: 0;
+    /* Reset padding */
+}
+
+.navbar-links>li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links>li>a {
+    padding: 0 var(--spacing-sm);
+    text-decoration: none;
+    color: var(--white-text-color);
+    /* Changed from var(--white) for consistency */
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.navbar-links>li>a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 10px;
+    left: 0;
+    background-color: var(--white-text-color);
+    /* Changed from var(--white) */
+    transform-origin: center;
+    transition: transform var(--transition-speed) ease;
+}
+
+.navbar-links>li>a:hover::after {
+    transform: scaleX(0.9);
+}
+
+.navbar-links>li>a:hover {
+    color: var(--white-text-color);
+    /* Keep color same on hover or slightly change if desired */
+}
+
+.nav-item-dropdown:hover .dropdown-menu-content {
+    /* This hover effect will be disabled on mobile */
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown-menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: var(--spacing-xs) 0;
+    list-style: none;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease, visibility var(--transition-speed);
+}
+
+.dropdown-menu-content li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+.dropdown-menu-content li a {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    color: var(--white-text-color);
+    /* Changed from var(--white) */
+    display: block;
+    width: 100%;
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    line-height: 1.4;
+    position: relative;
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.dropdown-menu-content li a::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - (2 * var(--spacing-md)));
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 10px;
+    left: var(--spacing-md);
+    background-color: var(--white-text-color);
+    /* Changed from var(--white) */
+    transform-origin: center;
+    transition: transform var(--transition-speed) ease;
+}
+
+.dropdown-menu-content li a:hover::after {
+    transform: scaleX(1);
+}
+
+.dropdown-menu-content li a:hover {
+    color: var(--white-text-color);
+    /* Kept consistent with navbar-text-color */
+    /* background-color: var(--background-color-medium); remove if not desired or adjust */
+}
+
+.navbar-right-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    /* Reduced gap slightly from md */
+}
+
+.cart-section {
+    position: relative;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white-text-color);
+    /* Use white text color for cart link consistency */
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed);
+}
+
+.cart-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle hover for dark navbar */
+}
+
+.cart-icon-svg {
+    stroke: var(--white-text-color);
+    /* Black stroke for the icon */
+    width: 22px;
+    /* Match SVG width attribute */
+    height: 22px;
+    /* Match SVG height attribute */
+    margin-right: var(--spacing-xs);
+    vertical-align: middle;
+}
+
+.cart-text {
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+}
+
+.cart-count-badge {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.70rem;
+    /* Slightly smaller */
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    /* Adjust for precise positioning over/near SVG */
+    right: 0px;
+    /* Adjust for precise positioning */
+    line-height: 1;
+    min-width: 16px;
+    /* Ensure it's somewhat circular even with single digit */
+    text-align: center;
+}
+
+.navbar-auth {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-auth .welcome-text {
+    margin-right: var(--spacing-sm);
+    font-size: var(--font-size-small);
+    color: var(--white-text-color);
+    /* CHANGED: Use white-text-color for better contrast */
+    font-weight: 500;
+    /* Optional: make it slightly bold if desired */
+}
+
+.navbar-auth .auth-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    margin-left: var(--spacing-xs);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.navbar-auth .login-button {
+    border: 2px solid var(--border-color);
+    /* Keep consistency if --border-color is white on dark bg */
+    color: var(--white-text-color);
+    /* Assuming var(--navbar-text-color) was white */
+}
+
+.navbar-auth .login-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border-color: var(--primary-color);
+}
+
+.navbar-auth .signup-button {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    border: 2px solid var(--primary-color);
+}
+
+.navbar-auth .signup-button:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+}
+
+.navbar-auth .logout-button {
+    background-color: var(--primary-color);
+    /* Made consistent with signup */
+    color: var(--white-text-color);
+    border: 2px solid var(--primary-color);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+}
+
+.navbar-auth .logout-button:hover {
+    background-color: var(--primary-color-darker);
+    /* Consistent hover */
+    border-color: var(--primary-color-darker);
+    opacity: 1;
+    /* Remove opacity if using direct background change */
+}
+
+
+/* --------- NEW: Responsive Styles Start Here --------- */
+
+
+/* Hamburger Menu Toggler (You will need to add a button with this class in your HTML) */
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: var(--spacing-sm);
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--white-text-color);
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-text-color);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+
+/* Tablet and Mobile Breakpoint */
+
+@media (max-width: 992px) {
+    .site-navbar {
+        /* Ensure space for logo, cart, and toggler */
+        justify-content: space-between;
+    }
+    .navbar-links {
+        /* Transform link list into a hidden vertical menu */
+        display: none;
+        /* Hide by default */
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        flex-direction: column;
+        height: auto;
+        padding: var(--spacing-sm) 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    /* This class will be toggled with JavaScript */
+    .navbar-links.active {
+        display: flex;
+    }
+    .navbar-links>li {
+        width: 100%;
+        height: auto;
+    }
+    .navbar-links>li>a {
+        padding: var(--spacing-sm) var(--spacing-md);
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+    }
+    /* Hide desktop dropdowns and handle them within the mobile menu flow */
+    .dropdown-menu-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding-left: var(--spacing-md);
+        /* Indent sub-items */
+        display: none;
+        /* Can be toggled with JS if needed */
+        width: 100%;
+    }
+    .nav-item-dropdown:hover .dropdown-menu-content {
+        display: none;
+        /* Disable hover opening */
+    }
+    .nav-item-dropdown.open .dropdown-menu-content {
+        display: block;
+        /* For JS-based accordion behavior */
+    }
+    /* Show the hamburger toggler */
+    .navbar-toggler {
+        display: block;
+    }
+    /* Hide the right-hand authentication buttons from the main bar */
+    .navbar-auth {
+        display: none;
+    }
+    /* We keep the logo and cart visible, but hide the "Cart" text */
+    .cart-text {
+        display: none;
+    }
+    .cart-icon-svg {
+        margin-right: 0;
+    }
+}
+
+
+/* Smaller mobile devices */
+
+@media (max-width: 480px) {
+    .site-navbar {
+        padding: 0 var(--spacing-sm);
+    }
+    .navbar-logo-img {
+        /* Optional: slightly smaller logo on very small screens */
+        max-height: calc(var(--navbar-height) - 25px);
+    }
+}

@@ -1,0 +1,559 @@
+/* css/equipment_details.css */
+
+.equipment-details-main {
+    padding: var(--spacing-lg) var(--spacing-md);
+    /* [cite: variables.css] */
+    background-color: var(--white);
+    /* [cite: variables.css] */
+}
+
+.equipment-details-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--background-color-light);
+    /* [cite: variables.css] */
+    padding: var(--spacing-lg);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: var(--box-shadow);
+    /* [cite: variables.css] */
+}
+
+.product-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-lg);
+    /* [cite: variables.css] */
+}
+
+.product-image-column {
+    flex: 1 1 400px;
+    min-width: 300px;
+}
+
+.product-main-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    border: 1px solid var(--border-color);
+    /* [cite: variables.css] */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+}
+
+.product-info-column {
+    flex: 2 1 500px;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+.product-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.product-brand {
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+    font-style: italic;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.product-stock p {
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.stock-available {
+    color: var(--success-color);
+}
+
+
+/* [cite: variables.css] */
+
+.stock-low {
+    color: #E67E22;
+}
+
+.stock-out {
+    color: var(--error-color);
+}
+
+
+/* [cite: variables.css] */
+
+.product-description-full h3,
+.product-specifications h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+.product-description-full p,
+.product-specifications p {
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.product-actions-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    /* [cite: variables.css] */
+    margin-top: var(--spacing-lg);
+    /* [cite: variables.css] */
+    flex-wrap: wrap;
+}
+
+.add-to-cart-detailed-form {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    /* [cite: variables.css] */
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+.add-to-cart-detailed-form .form-group {
+    margin-bottom: 0;
+}
+
+.quantity-selector label {
+    margin-right: var(--spacing-xs);
+    /* [cite: variables.css] */
+    font-weight: 500;
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    white-space: nowrap;
+}
+
+.quantity-selector input[type="number"] {
+    width: 70px;
+    padding: var(--spacing-xs);
+    /* [cite: variables.css] */
+    text-align: center;
+    border: 1px solid var(--border-color);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+}
+
+.add-to-cart-button-detail {
+    padding: var(--spacing-sm) var(--spacing-md);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    /* [cite: variables.css] */
+    white-space: nowrap;
+}
+
+.add-to-cart-button-detail:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.add-to-cart-button-detail:disabled {
+    background-color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    cursor: not-allowed;
+}
+
+
+/* .wishlist-form-detail-page {} */
+
+.wishlist-button-detail {
+    background: none;
+    border: 1px solid var(--text-color-secondary);
+    /* [cite: variables.css] */
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.wishlist-button-detail svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+    fill: none;
+    stroke: currentColor;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.wishlist-button-detail.active {
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+}
+
+.wishlist-button-detail.active svg {
+    fill: var(--white-text-color);
+    /* [cite: variables.css] */
+    stroke: var(--white-text-color);
+    /* [cite: variables.css] */
+}
+
+.wishlist-button-detail:hover:not(.active) {
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--primary-color);
+    /* [cite: variables.css] */
+    background-color: rgba(var(--primary-color-rgb, 255, 69, 36), 0.1);
+}
+
+
+/* Reviews Section Styles */
+
+.reviews-section {
+    margin-top: var(--spacing-xl);
+    /* [cite: variables.css] */
+    padding-top: var(--spacing-lg);
+    /* [cite: variables.css] */
+    border-top: 1px solid var(--border-color);
+    /* [cite: variables.css] */
+}
+
+.reviews-section .section-title,
+.review-form-section .section-title {
+    /* Apply to review form title as well */
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    font-weight: 600;
+    padding-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    border-bottom: 2px solid var(--primary-color);
+    /* [cite: variables.css] */
+    display: inline-block;
+}
+
+.reviews-list {
+    margin-top: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.review-item {
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.review-rating {
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    font-size: 1.1rem;
+}
+
+.review-rating .star {
+    color: #ccc;
+}
+
+
+/* Default empty star */
+
+.review-rating .star.filled {
+    color: var(--accent-color, #F1C40F);
+}
+
+
+/* Filled star - ensure --accent-color is defined */
+
+.review-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.review-text {
+    font-size: var(--font-size-small);
+    /* [cite: variables.css] */
+    color: var(--text-color-secondary);
+    /* [cite: variables.css] */
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+}
+
+.review-meta {
+    font-size: 0.8rem;
+    color: #777;
+    font-style: italic;
+}
+
+
+/* Review Form Section Styles */
+
+.review-form-section {
+    margin-top: var(--spacing-lg);
+    /* [cite: variables.css] */
+    padding-top: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-top: 1px solid #eee;
+    /* Lighter separator for form section */
+}
+
+.review-form {
+    background-color: var(--white);
+    /* [cite: variables.css] */
+    padding: var(--spacing-md);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    margin-top: var(--spacing-sm);
+    /* [cite: variables.css] */
+}
+
+.review-form .form-group {
+    margin-bottom: var(--spacing-md);
+    /* [cite: variables.css] */
+}
+
+.review-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    /* [cite: variables.css] */
+    color: var(--text-color-primary);
+    /* [cite: variables.css] */
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    /* [cite: variables.css] */
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    box-sizing: border-box;
+}
+
+.review-form input[type="text"]:focus,
+.review-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    /* [cite: variables.css] */
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 255, 69, 36), 0.25);
+}
+
+.review-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* Star Rating Input */
+
+.rating-group .star-rating {
+    display: inline-flex;
+    /* Changed from flex to inline-flex for better flow with label */
+    flex-direction: row-reverse;
+    /* To make stars fill left-to-right on hover/selection */
+    justify-content: flex-end;
+    /* Align stars to the right if inline-flex causes wrap */
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+    /* Hide actual radio buttons */
+}
+
+.star-rating label {
+    font-size: 2rem;
+    /* Size of the star characters */
+    color: #ddd;
+    /* Color of empty stars */
+    cursor: pointer;
+    padding: 0 0.1em;
+    /* Small spacing between stars */
+    margin-bottom: 0;
+    /* Override default label margin */
+    transition: color 0.2s;
+}
+
+.star-rating input[type="radio"]:checked~label,
+
+/* Stars to the right of checked one */
+
+.star-rating label:hover,
+
+/* Star being hovered */
+
+.star-rating label:hover~label {
+    /* Stars to the right of hovered one */
+    color: var(--accent-color, #F1C40F);
+    /* Filled star color */
+}
+
+.submit-review-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    /* [cite: variables.css] */
+    background-color: var(--primary-color);
+    /* [cite: variables.css] */
+    color: var(--white-text-color);
+    /* [cite: variables.css] */
+    border: none;
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    font-size: var(--font-size-medium);
+    /* [cite: variables.css] */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    /* [cite: variables.css] */
+}
+
+.submit-review-button:hover {
+    background-color: var(--primary-color-darker);
+    /* [cite: variables.css] */
+}
+
+.message.global-message {
+    max-width: 1100px;
+    margin: 0 auto var(--spacing-md) auto;
+    /* [cite: variables.css] */
+    padding: var(--spacing-sm);
+    /* [cite: variables.css] */
+    border-radius: var(--border-radius);
+    /* [cite: variables.css] */
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* ... existing message styles ... */
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--success-color);
+    /* [cite: variables.css] */
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    /* [cite: variables.css] */
+    border: 1px solid var(--error-color);
+    /* [cite: variables.css] */
+}
+
+.global-message p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .product-layout {
+        flex-direction: column;
+    }
+    .product-image-column,
+    .product-info-column {
+        flex-basis: auto;
+    }
+    .product-name {
+        font-size: 1.8rem;
+    }
+    .product-price {
+        font-size: 1.5rem;
+    }
+    .product-actions-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .add-to-cart-detailed-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-sm);
+    }
+    /* [cite: variables.css] */
+    .add-to-cart-detailed-form .form-group.quantity-selector {
+        width: 100%;
+    }
+    .quantity-selector input[type="number"] {
+        width: 100%;
+    }
+    .add-to-cart-button-detail {
+        width: 100%;
+    }
+    .wishlist-form-detail-page {
+        width: 100%;
+    }
+    .wishlist-button-detail {
+        width: 100%;
+        border-radius: var(--border-radius);
+    }
+    /* [cite: variables.css] */
+}

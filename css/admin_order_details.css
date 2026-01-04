@@ -1,0 +1,236 @@
+/* css/admin_order_details.css */
+
+.admin-content-container .admin-header {
+    /* Styles for header on this page if needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.admin-content-container .admin-page-title {
+    margin: 0;
+    /* Reset margin if admin-header handles it */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.admin-button.plain-button {
+    /* Re-iterate if not in admin_layout.css */
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed), opacity var(--transition-speed);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--white);
+    color: var(--secondary-color);
+}
+
+.admin-button.plain-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-text-color);
+    opacity: 1;
+}
+
+.styled-admin-box {
+    /* Common box style for sections on this page */
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: var(--spacing-lg);
+}
+
+.styled-admin-box h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color-primary);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.order-info-section p,
+.shipping-info-section p {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+}
+
+.order-info-section p strong,
+.shipping-info-section p strong {
+    font-weight: 600;
+    color: var(--text-color-primary);
+}
+
+.order-status {
+    /* Copied from admin_manage_orders.css - ideally in admin_layout.css */
+    padding: 3px 8px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: #ffe0b2;
+    color: #e65100;
+}
+
+.status-processing {
+    background-color: #b3e5fc;
+    color: #01579b;
+}
+
+.status-shipped {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+.status-delivered {
+    background-color: #d1c4e9;
+    color: #311b92;
+}
+
+.status-completed {
+    background-color: var(--success-color);
+    color: var(--white-text-color);
+}
+
+.status-cancelled {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+}
+
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-small);
+}
+
+.order-items-table th,
+.order-items-table td {
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.order-items-table thead th {
+    background-color: #f0f0f0;
+    /* Lighter header for this table */
+    font-weight: 600;
+}
+
+.item-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.update-status-section .admin-form {
+    padding: 0;
+    margin-top: var(--spacing-sm);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.update-status-section .form-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: 0;
+    /* No margin if it's the only group before button */
+    flex-basis: auto;
+    /* Override from two-column form setup */
+}
+
+.update-status-section .form-group label {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    /* Prevent label from shrinking */
+}
+
+.update-status-section .form-group select {
+    max-width: 200px;
+    /* Control width of select */
+    flex-grow: 1;
+}
+
+.update-status-section .admin-button {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: auto;
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    font-size: var(--font-size-medium);
+}
+
+.update-status-section .admin-button:hover {
+    background-color: var(--primary-color-darker);
+    border: 2px solid var(--primary-color-darker);
+}
+
+
+/* Message styling (if not already in admin_layout.css) */
+
+.message.global-message {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+}
+
+.global-message.success-message {
+    background-color: rgba(0, 160, 0, 0.1);
+    color: var(--success-color);
+    border: 2px solid var(--success-color);
+}
+
+.global-message.error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: var(--error-color);
+    border: 2px solid var(--error-color);
+}
+
+.global-message p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .order-details-grid {
+        grid-template-columns: 1fr;
+        /* Stack info boxes */
+    }
+    .update-status-section .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .update-status-section .form-group select {
+        max-width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+    .update-status-section .admin-button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
