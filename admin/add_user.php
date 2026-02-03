@@ -297,3 +297,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="<?php echo $root_path_prefix; ?>js/signup.js"></script> 
 </body>
 </html>
+
