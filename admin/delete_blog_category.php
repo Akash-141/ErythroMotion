@@ -57,3 +57,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['category_id'])) {
 header("Location: manage_blog_categories.php");
 exit();
 ?>
+
