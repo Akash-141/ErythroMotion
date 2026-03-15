@@ -151,4 +151,5 @@ if (isset($_SESSION['feedback_type'])) unset($_SESSION['feedback_type']);
     </main>
     <?php include __DIR__ . '/includes/footer.php'; ?>
 </body>
+    
 </html>
