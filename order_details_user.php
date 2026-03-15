@@ -165,4 +165,5 @@ if (!$order_id_from_get) {
 
     <?php include __DIR__ . '/includes/footer.php'; // [cite: footer.php] ?>
 </body>
+    
 </html>
