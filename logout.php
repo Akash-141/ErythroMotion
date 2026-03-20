@@ -23,3 +23,4 @@ session_destroy();
 
 header("Location: " . $root_path_prefix . "index.php");
 exit();
+
