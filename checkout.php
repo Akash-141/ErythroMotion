@@ -247,4 +247,5 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST" && isset($_SESSION['user_id'])) {
 
     <?php include __DIR__ . '/includes/footer.php'; ?>
 </body>
+    
 </html>
