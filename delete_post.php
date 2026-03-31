@@ -52,4 +52,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['post_id'])) {
 header("Location: profile.php#my-blog-posts-section");
 exit();
 ?>
-
