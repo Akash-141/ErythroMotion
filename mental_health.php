@@ -85,4 +85,5 @@ $page_title = "Mental Health & Well-being - ErythroMotion";
 
     <?php include __DIR__ . '/includes/footer.php'; ?>
 </body>
+    
 </html>
