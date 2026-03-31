@@ -225,4 +225,5 @@ try {
     <?php include __DIR__ . '/includes/footer.php'; // [cite: footer.php] ?>
     <script src="<?php echo $root_path_prefix; ?>js/homepage_carousel.js"></script> <!-- Link to new JS file -->
 </body>
+    
 </html>
