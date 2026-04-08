@@ -59,4 +59,5 @@ $page_title = "Privacy Policy - ErythroMotion";
 
     <?php include __DIR__ . '/includes/footer.php'; ?>
 </body>
+
 </html>
